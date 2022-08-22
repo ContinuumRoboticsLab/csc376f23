@@ -120,8 +120,10 @@ After running the docker container using ```make up``` command, run the vnc view
         ```
    
 
-## Note
+## Notes
 * All changes made in the local machine in the **csc376_root** directory will be reflected inside the docker container. So make use of this directory for code development.
+* You will find individual folders for each assignment of the course in this **csc376_root**. For now, starter code for Assignment 0 (content of Practical 1) is provided. The starter code for Assignments 1-3 will be released via MarkUs once the corresponding assignment goes online.
+* Assignment 0 is the content of Practical 1 and is used as an introuction to the simulation framework. Despite its name, **Assignment 0 is not a graded assignment** for CSC376.
 
 ## References for docker environment
 
