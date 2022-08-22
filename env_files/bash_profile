@@ -1,0 +1,12 @@
+export ROS_HOSTNAME=localhost
+export ROS_MASTER_URI=http://localhost:11311
+export WORKSPACE=/home/ubuntu/catkin_ws
+source /opt/ros/noetic/setup.bash
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/home/ubuntu/csc376/csc376-assignment0/build
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/home/ubuntu/csc376/csc376-assignment1/build
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/home/ubuntu/csc376/csc376-assignment2/build
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/home/ubuntu/csc376/csc376-assignment3/build
+export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:/home/ubuntu/csc376/models
+export GAZEBO_RESOURCE_PATH=/usr/share/gazebo-11:/home/ubuntu/csc376/models
+
+alias vim=vi

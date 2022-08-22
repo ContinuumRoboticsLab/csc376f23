@@ -1,0 +1,13 @@
+material SphereMaterial
+{
+  technique
+  {
+      pass
+      {
+		scene_blend alpha_blend
+        depth_write off
+		ambient 0 1 0 0.5
+		diffuse 0 1 0 0.5
+      }
+  }
+}
