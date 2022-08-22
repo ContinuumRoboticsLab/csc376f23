@@ -1,10 +1,10 @@
-# Gazebo development enviroment in Docker for CSC 376
+# CSC376 Simulation Environment
 
 Modified from : [mrkoz/mybot_ws](https://github.com/mrkoz/mybot_ws)
 
-## WTF? (What's This For?)
+## Introduction
 
-This repo contains a docker container that hosts a development environment for CSC 376- Fundamental of Robotics at the University of Toronto. It runs Ubuntu 20.04 with Gazebo(11.10.2), Eigen(3.3.7), CMake(3.16.3)  which are required for the course's assignments. Upon building and running the container, one can access the development environment's desktop with a VNC viewer. 
+This repository contains a docker container that hosts a the simulation environment for "CSC376: Fundamental of Robotics" at the University of Toronto. It runs Ubuntu 20.04 with Gazebo (11.10.2), Eigen (3.3.7) and CMake (3.16.3). Upon building and running the container, one can access the simulation environment's desktop with a VNC viewer. 
 
 ## Dependancies 
 
@@ -17,7 +17,7 @@ In order to run this docker container the host machines (Ubuntu/macOS/Windows) s
 
 
 
-### Install dependancies
+### Install Dependencies
 
 * Ubuntu 
     * Check CMake installation or else install it 
