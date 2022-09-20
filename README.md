@@ -55,7 +55,15 @@ In order to run this docker container the host machines (Ubuntu/macOS/Windows) s
     ```
 
 * Windows 
-    * Windows installation instructions comes here
+    * Docker and Docker compose will be installed when installing Docker Desktop. Install from [here](https://www.docker.com/products/docker-desktop/). 
+        * run the docker desktop and ensure docker is able to start and run without any issues
+            * A wsl error might occur. follow instructions it provides to install wsl.
+    * Install make using choco following commands [here](https://chocolatey.org/install) and then run in PowerShell or command prompt **as an Adminisitrator**,
+    ```
+    choco install make
+    ```
+    * Download and Install VNC viewer from [here](https://www.realvnc.com/en/connect/download/viewer/windows/)
+
 
 
 
@@ -67,17 +75,26 @@ In order to run this docker container the host machines (Ubuntu/macOS/Windows) s
 * Ubuntu 
     * run, 
     ```
-    cd  <path to this repo>/csc376-dev-env
+    cd  <path to this repo>/csc376f22
     sudo make up
     ```
 * macOS 
     * run, 
     ```
-    cd  <path to this repo>/csc376-dev-env
+    cd  <path to this repo>/csc376f22
     make up
     ```
 * Windows 
-    * windows installation comes here  
+    * First ensure docker-desktop is running 
+    * Then open a powershell terminal in the location of this repo csc376f22 **as an Administrator**
+    * now run,
+    ```
+    make up
+    ```
+    * Once the compilation is done, open the vnc viewer and type in the following URL to access the Ubuntu docker environment's desktop.
+    ```
+    127.0.0.1:5900
+    ```
 
 ### Run VNC client to access dev environment 
 After running the docker container using ```make up``` command, run the vnc viewer to access the development environment desktop. In a new terminal run, 
