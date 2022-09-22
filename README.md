@@ -138,6 +138,7 @@ After running the docker container using ```make up``` command, run the vnc view
    
 
 ## Notes
+* In addition to running the simulation environment on your own machine using the provided Docker environment, students can also use their UTORid to log in to the Alienware machines in the teaching lab **MN3110**, which runs Ubuntu and has Gazebo preinstalled. For this, simply copy the folder **csc376f22** from the above repository into your **home directory**. The simulation environment's starter code is then contained in the folder **csc376_root**. You can directly modify and compile this code  - there is no need to set up and use the Docker environment, when working on these machines.
 * All changes made in the local machine in the **csc376_root** directory will be reflected inside the docker container. So make use of this directory for code development.
 * You will find individual folders for each assignment of the course in this **csc376_root**. For now, starter code for Assignment 0 (content of Practical 1) is provided. The starter code for Assignments 1-3 will be released via MarkUs once the corresponding assignment goes online.
 * Assignment 0 is the content of Practical 1 and is used as an introuction to the simulation framework. Despite its name, **Assignment 0 is not a graded assignment** for CSC376.
