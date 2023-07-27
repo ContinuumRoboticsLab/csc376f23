@@ -15,10 +15,7 @@ jobs:
     - name: Build container
       run: docker-compose build
     - name: run container and close it 
-      run: |
-      docker-compose up & 
-      sleep 40 & 
-      docker-compose down
+      run: docker-compose up & sleep 40 & docker-compose down
     
 
   
