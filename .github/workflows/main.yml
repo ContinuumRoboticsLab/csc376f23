@@ -1,0 +1,29 @@
+name: Test
+
+on:
+  push:
+    branches:
+    - testing_ci
+    
+jobs: 
+  workstation_docker_job:
+    timeout-minutes: 35
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Start containers
+      run: docker-compose -f "docker/workstation_computer/docker-compose-gui.yml" up -d --build
+    - name: Stop containers
+      run: docker-compose -f "docker/workstation_computer/docker-compose-gui.yml" down      
+
+  realtime_docker_job:
+    timeout-minutes: 35
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Start containers
+      run: make up
+    - name: Stop containers
+      run: docker-compose -f "docker/realtime_computer/docker-compose-gui.yml" down  
