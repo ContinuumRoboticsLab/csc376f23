@@ -14,6 +14,12 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v1
     - name: Start containers
-      run: make up
-    - name: Stop containers
-      run: make down 
+      run: docker-compose up
+  
+  vnc_connection_job:
+    - name: connect the vnc viewer
+      run: vncviewer 127.0.0.1:5900
+
+  close_docker_job:
+    - name: Close containers
+      run: docker-compose down
