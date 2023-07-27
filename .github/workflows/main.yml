@@ -7,7 +7,7 @@ on:
     
 jobs:  
 
-  ubuntu_build_job:
+  build_container_job:
     timeout-minutes: 35
     runs-on: ubuntu-latest
     steps:
@@ -17,9 +17,13 @@ jobs:
       run: docker-compose up
   
   vnc_connection_job:
+    needs: [build_container_job]
+    steps:
     - name: connect the vnc viewer
       run: vncviewer 127.0.0.1:5900
 
   close_docker_job:
+    needs: [vnc_connection_job]
+    steps:
     - name: Close containers
       run: docker-compose down
