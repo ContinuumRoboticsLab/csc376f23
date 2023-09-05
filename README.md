@@ -45,12 +45,16 @@ In order to run this docker container the host machines (Ubuntu/macOS/Windows) s
     ```
     brew install cmake 
     ```
-    * Docker installation-
-    
-        Follow instructions [here](https://runnable.com/docker/install-docker-on-macos) to install docker on Mac. To verify installation run the commands below and you should not get any error.  
+    * Docker Desktop installation-
+        - Download .dmg file from [here](https://docs.docker.com/desktop/install/mac-install/) to install docker on Mac. 
+        - Once downloaded, double-click the .dmg file 
+        - This will lead to a popup menu where you could drag and drop docker application to your applications which would install docker desktop
+        - You could also follow the instructions [here](https://docs.docker.com/desktop/install/mac-install/) for more details
+        
+    To verify installation run the commands below and you should not get any error.  
     ```
     docker --version 
-    docker-machine --version 
+    docker machine --version 
     docker-compose --version
     ```
 
@@ -75,18 +79,24 @@ In order to run this docker container the host machines (Ubuntu/macOS/Windows) s
 * Ubuntu 
     * run, 
     ```
-    cd  <path to this repo>/csc376f22
+    cd  <path to this repo>/csc376f23
     sudo make up
     ```
 * macOS 
+    * First ensure docker-desktop is running
     * run, 
     ```
-    cd  <path to this repo>/csc376f22
+    cd  <path to this repo>/csc376f23
     make up
+    ```
+    If there is an error that says- "xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun", run the command below,
+
+    ```
+    xcode-select --install
     ```
 * Windows 
     * First ensure docker-desktop is running 
-    * Then open a powershell terminal in the location of this repo csc376f22 **as an Administrator**
+    * Then open a powershell terminal in the location of this repo csc376f23 **as an Administrator**
     * now run,
     ```
     make up
@@ -138,7 +148,7 @@ After running the docker container using ```make up``` command, run the vnc view
    
 
 ## Notes
-* In addition to running the simulation environment on your own machine using the provided Docker environment, students can also use their UTORid to log in to the Alienware machines in the teaching lab **MN3110**, which runs Ubuntu and has Gazebo preinstalled. For this, simply copy the folder **csc376f22** from the above repository into your **home directory**. The simulation environment's starter code is then contained in the folder **csc376_root**. You can directly modify and compile this code  - there is no need to set up and use the Docker environment, when working on these machines.
+* In addition to running the simulation environment on your own machine using the provided Docker environment, students can also use their UTORid to log in to the Alienware machines in the teaching lab **MN3110**, which runs Ubuntu and has Gazebo preinstalled. For this, simply copy the folder **csc376f23** from the above repository into your **home directory**. The simulation environment's starter code is then contained in the folder **csc376_root**. You can directly modify and compile this code  - there is no need to set up and use the Docker environment, when working on these machines.
 * All changes made in the local machine in the **csc376_root** directory will be reflected inside the docker container. So make use of this directory for code development.
 * You will find individual folders for each assignment of the course in this **csc376_root**. For now, starter code for Assignment 0 (content of Practical 1) is provided. The starter code for Assignments 1-3 will be released via MarkUs once the corresponding assignment goes online.
 * Assignment 0 is the content of Practical 1 and is used as an introuction to the simulation framework. Despite its name, **Assignment 0 is not a graded assignment** for CSC376.
