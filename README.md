@@ -154,6 +154,7 @@ After running the docker container using ```make up``` command, run the vnc view
 cd <path to csc376f23>/csc376f23/csc376_root
 chmod +x set_env_variable.sh
 ./set_env_variable.sh
+source ~/.bashrc
 ```
 * In addition to running the simulation environment on your own machine using the provided Docker environment, students can also use their UTORid to log in to the Alienware machines in the teaching lab **MN3110**, which runs Ubuntu and has Gazebo preinstalled. For this, simply copy the folder **csc376f23** from the above repository into your **home directory**. The simulation environment's starter code is then contained in the folder **csc376_root**. You can directly modify and compile this code  - there is no need to set up and use the Docker environment, when working on these machines.
 * All changes made in the local machine in the **csc376_root** directory will be reflected inside the docker container. So make use of this directory for code development.
