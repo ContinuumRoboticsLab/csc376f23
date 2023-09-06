@@ -148,6 +148,13 @@ After running the docker container using ```make up``` command, run the vnc view
    
 
 ## Notes
+
+* If you are using the code base in an ubuntu computer, with dependancies installed and you are **not** using the docker environment provided, you need to set environment variables for gazebo to find your meshes/models. For this, you need to run the below commands **once**
+```
+cd <path to csc376f23>/csc376f23/csc376_root
+chmod +x set_env_variable.sh
+./set_env_variable.sh
+```
 * In addition to running the simulation environment on your own machine using the provided Docker environment, students can also use their UTORid to log in to the Alienware machines in the teaching lab **MN3110**, which runs Ubuntu and has Gazebo preinstalled. For this, simply copy the folder **csc376f23** from the above repository into your **home directory**. The simulation environment's starter code is then contained in the folder **csc376_root**. You can directly modify and compile this code  - there is no need to set up and use the Docker environment, when working on these machines.
 * All changes made in the local machine in the **csc376_root** directory will be reflected inside the docker container. So make use of this directory for code development.
 * You will find individual folders for each assignment of the course in this **csc376_root**. For now, starter code for Assignment 0 (content of Practical 1) is provided. The starter code for Assignments 1-3 will be released via MarkUs once the corresponding assignment goes online.
